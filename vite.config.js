@@ -14,8 +14,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './src/index.html',
-      }
-    }
+      },
+    },
   },
   plugins: [
     injectHTML(),
@@ -29,4 +29,4 @@ export default defineConfig({
       },
     }),
   ],
-})
+});
