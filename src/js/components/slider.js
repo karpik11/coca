@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
 
-    modules: [Navigation, Pagination, Autoplay],
+    modules: [Navigation, Pagination],
     slidesPerView: 'auto',
     spaceBetween: 32,
     loop: true,

@@ -1,21 +1,24 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export const usePartnerSlider = () => {
   new Swiper('.partners__slider', {
-    modules: [Navigation, Pagination, Autoplay],
+    modules: [Autoplay],
     slidesPerView: 'auto',
     spaceBetween: 10,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    loop: true,
+    centeredSlides: true,
+    speed: 1500,
+    autoplay: true,
+    delay: 100,
+
+
     breakpoints: {
-      576: {
-        autoplay: true,
+      577: {
+        autoplay: false,
       }
     }
   });

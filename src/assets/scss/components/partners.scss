@@ -1,4 +1,5 @@
 .partners {
+  overflow: hidden;
   padding: 108px 0;
 
   @include mobile {
@@ -42,6 +43,7 @@
 
     @include mobile {
       gap: 10px;
+      flex-wrap: nowrap;
     }
   }
 
@@ -52,4 +54,9 @@
     height: 90px;
     background-color: #fff;
   }
+}
+
+.swiper-slide {
+  max-width: 160px;
+  max-height: 90px;
 }
