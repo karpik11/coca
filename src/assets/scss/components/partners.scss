@@ -21,7 +21,7 @@
 
   &__title {
     font-weight: 500;
-    line-height: 1.78;
+    line-height: 1.8;
     color: var(--neutral-color-150);
 
     @include small-tablet {
@@ -56,7 +56,7 @@
     background-color: #fff;
   }
 
-  .swiper-slide {
+  &__slider.swiper {
     display: none;
 
     @include small-tablet {
