@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -9,15 +9,15 @@ import 'swiper/css/pagination';
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
 
-    modules: [Navigation, Pagination],
+    modules: [Navigation],
     slidesPerView: 'auto',
     spaceBetween: 32,
     loop: true,
     centeredSlides: true,
 
     navigation: {
-      nextEl: '.insight__slider-next',
       prevEl: '.insight__slider-prev',
+      nextEl: '.insight__slider-next',
     },
 
     breakpoints: {
@@ -28,4 +28,16 @@ export const useInsightSlider = () => {
   });
 }
 
+export const useTestimonialsSlider = () => {
+  new Swiper('.testimonials__slider', {
+    modules: [Navigation],
+    slidesPerView: 'auto',
+    spaceBetween: 2,
+    loop: true,
 
+    navigation: {
+      prevEl: '.testimonials__btn--prev',
+      nextEl: '.testimonials__btn--next',
+    },
+  });
+}
