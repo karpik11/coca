@@ -1,38 +1,39 @@
 .partners {
-  overflow: hidden;
-  padding: 108px 0;
+  padding: 80px 0;
+
+  @include tablet {
+    padding: 50px 0;
+  }
 
   @include mobile {
-    padding: 76px 0;
+    padding: 66px 0;
   }
 
   &__container {
     @include flex-all-between;
     gap: 30px;
-    max-width: 1110px;
 
     @include small-tablet {
-      flex-direction: column;
-      justify-content: center;
+      display: block;
       text-align: center;
     }
   }
 
   &__title {
     font-weight: 500;
-    line-height: 178%;
+    line-height: 1.78;
     color: var(--neutral-color-150);
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
 
     &-num {
       display: block;
-      margin-bottom: 16px;
       font-weight: 600;
+      line-height: 1.2;
       letter-spacing: -0.04em;
       color: var(--neutral-color-100);
-
-      @include small-mobile {
-        margin-bottom: 10px;
-      }
     }
   }
 
@@ -41,22 +42,25 @@
     gap: 10px 30px;
     flex-wrap: wrap;
 
-    @include mobile {
-      gap: 10px;
-      flex-wrap: nowrap;
+    @include small-tablet {
+      display: none;
     }
   }
 
-  &__item {
+  &__item,
+  &__item.swiper-slide {
     @include flex-all-center;
     border-radius: 16px;
     width: 160px;
     height: 90px;
     background-color: #fff;
   }
-}
 
-.swiper-slide {
-  max-width: 160px;
-  max-height: 90px;
+  .swiper-slide {
+    display: none;
+
+    @include small-tablet {
+      display: block;
+    }
+  }
 }
