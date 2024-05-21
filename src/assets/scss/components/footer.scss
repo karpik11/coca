@@ -18,10 +18,8 @@
       margin-bottom: 84px;
     }
 
-    @include mobile {
-      align-items: center;
+    @include small-tablet {
       margin-bottom: 64px;
-      text-align: center;
     }
 
     @include small-mobile {
@@ -109,6 +107,10 @@
   &__nav {
     @include tablet {
       width: 100%;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -275,5 +277,113 @@
     font-weight: 500;
     line-height: 1.43;
     color: #fff;
+  }
+}
+
+.accordion-list {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &__item {
+    border: 0.3px solid var(--neutral-color-150);
+    border-radius: 30px;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin: 0 auto 16px;
+    }
+
+    &--opened .accordion-list__opened-icon {
+      opacity: 1;
+    }
+
+    &--opened .accordion-list__closed-icon {
+      opacity: 0;
+    }
+  }
+
+  &__control {
+    @include flex-all-between;
+    gap: 15px;
+    padding: 24px 32px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    background: transparent;
+    transition: var(--transition);
+  }
+
+  &__control-title {
+    font-size: 16px;
+    color: #fff;
+  }
+
+  &__control-icon {
+    position: relative;
+    transition: var(--transition);
+  }
+
+  &__closed-icon {
+    transition: var(--transition);
+  }
+
+  &__opened-icon {
+    position: absolute;
+    top: 35%;
+    right: 16%;
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  &__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: var(--transition);
+  }
+}
+
+.accordion-content {
+  display: flex;
+  padding: 0 30px;
+  transition: var(--transition);
+
+  &__subitem {
+    padding-bottom: 20px;
+
+    &-link {
+      position: relative;
+      margin: 0 auto;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--neutral-color-150);
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        left: 0;
+        height: 1px;
+        background-color: var(--neutral-color-150);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity var(--transition),
+          visibility var(--transition);
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
   }
 }
