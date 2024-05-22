@@ -1,3 +1,5 @@
+export const useAccordion = () => {
+
 const accordionLists = document.querySelectorAll('.accordion-list');
 
 accordionLists.forEach(el => {
@@ -31,4 +33,4 @@ accordionLists.forEach(el => {
 
   })
 
-})
+})}
