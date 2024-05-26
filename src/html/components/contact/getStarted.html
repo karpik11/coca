@@ -10,7 +10,7 @@
           hellosansbrothers@gmail.com
         </a>
       </p>
-      <form class="get-started__form">
+      <form class="get-started__form" onsubmit="alert('Отправлено!');return false">
         <div class="get-started__form-top">
           <label class="get-started__form-label ">
             <span class="get-started__form-label-text text-p-small">
@@ -33,6 +33,7 @@
           </span>
           <input class="get-started__form-input text-p-small" name="email" required type="email"
             placeholder="you@company.com">
+          <span class="get-started__form-error">Это поле должно содержать E-Mail в формате you@company.com</span>
         </label>
         <label class="get-started__form-label ">
           <span class="get-started__form-label-text text-p-small">

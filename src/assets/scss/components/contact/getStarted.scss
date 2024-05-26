@@ -111,6 +111,20 @@
       line-height: 1.71;
       color: #1d1e25;
 
+      &:invalid {
+        &:not(:placeholder-shown) {
+          border-color: red;
+        }
+
+        &:not(:placeholder-shown) + .get-started__form-error {
+          display: block;
+        }
+      }
+
+      &:valid:not(:placeholder-shown) {
+        border-color: green;
+      }
+
       &--small {
         width: 240px;
 
@@ -124,6 +138,15 @@
         height: 134px;
         resize: none;
       }
+    }
+
+    &-error {
+      display: block;
+      display: none;
+      margin-top: 3px;
+      font-size: 12px;
+      text-align: left;
+      color: red;
     }
 
     &-btn {
