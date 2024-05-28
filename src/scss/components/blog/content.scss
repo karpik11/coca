@@ -1,0 +1,181 @@
+.blog {
+  padding: 80px 0 160px;
+
+  @include small-tablet {
+    padding: 40px 0 80px;
+  }
+
+  @include mobile {
+    padding: 30px 0 12px;
+  }
+
+  &__container {
+    padding: 0 145px;
+
+    @include mini-desktop {
+      padding: 0 100px;
+    }
+
+    @include small-tablet {
+      padding: 0 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 48px;
+    max-width: 970px;
+    font-weight: 700;
+    letter-spacing: -3px;
+  }
+
+  &__card {
+    margin-bottom: 80px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+
+    &-top {
+      @include flex-all-between;
+      gap: 15px;
+      margin-bottom: 24px;
+
+      @include mobile {
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 5px;
+      }
+
+      &-author {
+        @include flex-align-center;
+        gap: 24px;
+
+        @include mobile {
+          margin-bottom: 15px;
+        }
+
+        &-text {
+          @include flex-column;
+          gap: 4px;
+        }
+
+        &-name {
+          font-weight: 600;
+          line-height: 1.44;
+          color: var(--neutral-color-100);
+        }
+
+        &-prof {
+          font-weight: 500;
+          line-height: 1.62;
+          color: var(--neutral-color-150);
+        }
+      }
+
+      &-date {
+        align-self: flex-end;
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--neutral-color-150);
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 56px;
+    font-weight: 400;
+    line-height: 1.78;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__approach {
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: var(--neutral-color-100);
+    }
+
+    &-text {
+      margin-bottom: 56px;
+      font-weight: 400;
+      line-height: 1.78;
+      color: var(--neutral-color-100);
+
+      @include mobile {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  &__profile {
+    @include flex-all-between;
+    gap: 48px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &-img {
+      align-self: flex-start;
+    }
+
+    &-info {
+      &-nav {
+        @include flex-align-center;
+        gap: 24px;
+        margin-bottom: 14px;
+
+        @include small-tablet {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      &-list {
+        @include flex-all-between;
+        gap: 32px;
+      }
+
+      &-link {
+        transition: opacity var(--transition);
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      &-written {
+        margin-bottom: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--neutral-color-150);
+      }
+
+      &-author {
+        margin-bottom: 16px;
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: -1px;
+        color: var(--neutral-color-100);
+      }
+
+      &-prof {
+        margin-bottom: 16px;
+        font-weight: 500;
+        line-height: 1.44;
+        color: var(--neutral-color-150);
+      }
+
+      &-descr {
+        font-weight: 400;
+        line-height: 32px;
+        color: var(--neutral-color-100);
+      }
+    }
+  }
+}
